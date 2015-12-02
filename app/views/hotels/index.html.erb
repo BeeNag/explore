@@ -1,0 +1,8 @@
+<h3>Hotels</h3>
+
+<p>These are <%= @hotels.count %> lovely-jubbly hotels:</p>
+<ul>
+  <% @hotels.each do |hotel| %>
+  	<li><%= hotel.name %></li>
+  <% end %>
+</ul>
