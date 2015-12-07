@@ -1,8 +1,27 @@
 <h3>Hotels</h3>
 
 <p>These are <%= @hotels.count %> lovely-jubbly hotels:</p>
-<ul>
+<!-- <ul>
   <% @hotels.each do |hotel| %>
   	<li><strong><%= hotel.title %></strong>: <%= hotel.body %> (Price per night: <%= hotel.price %>)</li>
   <% end %>
-</ul>
+</ul> -->
+
+<table border="2px solid black">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Body</th>
+			<th>Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @hotels.each do |hotel| %>
+		<tr>
+			<td><%= hotel.title %></td>
+			<td><%= hotel.body %></td>
+			<td><%= hotel.price %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
