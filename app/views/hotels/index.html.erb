@@ -1,4 +1,4 @@
-<h3>Hotels</h3>
+<h3><%= pluralize(@hotels.count, 'Hotels') %></h3>
 
 <p>These are <%= @hotels.count %> lovely-jubbly hotels:</p>
 <!-- <ul>
@@ -13,6 +13,7 @@
 			<th>Title</th>
 			<th>Body</th>
 			<th>Price</th>
+			<th>Posted On</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -21,6 +22,7 @@
 			<td><%= hotel.title %></td>
 			<td><%= hotel.body %></td>
 			<td><%= hotel.price %></td>
+			<td><%= hotel.created_at.to_s(:short) %></td>
 		</tr>
 		<% end %>
 	</tbody>
