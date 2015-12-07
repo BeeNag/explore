@@ -3,6 +3,6 @@
 <p>These are <%= @hotels.count %> lovely-jubbly hotels:</p>
 <ul>
   <% @hotels.each do |hotel| %>
-  	<li><strong><%= hotel.title %></strong>: <%= hotel.body %></li>
+  	<li><strong><%= hotel.title %></strong>: <%= hotel.body %> (Price per night: <%= hotel.price %>)</li>
   <% end %>
 </ul>

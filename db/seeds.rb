@@ -6,5 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-hotels = Hotel.create([{title: 'The Dorchester', body: 'A super-duper lovely hotel on Park Lane.'}, {title: 'The Shangri-La', body: 'Hotel in the Shard. Very popular with the young elite.'}, {title: 'The Mandarin Oriental', body: 'Popular hotel in the heart of Knightsbridge. Commonly used for Jewish wedding parties.'}])
+hotels = Hotel.create([{title: 'The Dorchester', body: 'A super-duper lovely hotel on Park Lane.', price: 249.99}, {title: 'The Shangri-La', body: 'Hotel in the Shard. Very popular with the young elite.', price: 99.99}, {title: 'The Mandarin Oriental', body: 'Popular hotel in the heart of Knightsbridge. Commonly used for Jewish wedding parties.', price: 199.99}])
 restaurants = Restaurant.create([{title: 'The York & Albany'}, {title: 'The Hawksmoor'}, {title: 'Cafe Med'}])
