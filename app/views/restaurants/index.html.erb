@@ -1,8 +1,22 @@
-<h3>Restaurants</h3>
+<h3><%= pluralize(@restaurants.count, 'Restaurants') %></h3>
 
 <p>These are <%= @restaurants.count %> lovely-jubbly restaurants:</p>
-<ul>
-  <% @restaurants.each do |restaurant| %>
-  	<li><%= restaurant.title %></li>
-  <% end %>
-</ul>
+
+<table border="2px solid black">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Posted On</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @restaurants.each do |restaurant| %>
+		<tr>
+			<td><%= restaurant.title %></td>
+			<td><%= restaurant.created_at.to_s(:short) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<p><a href="/hotels">Back to the Hotels</a></p>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'hotels' => 'hotels#index'
+  get 'hotels/:id' => 'hotels#show', as: :hotel
   root 'hotels#index'
   get 'restaurants' => 'restaurants#index'
 

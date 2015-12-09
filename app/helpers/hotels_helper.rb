@@ -2,7 +2,7 @@ module HotelsHelper
 	 def format_body(hotel)
         if hotel.body.present?
             # note you can call a helper from a helper
-            truncate(hotel.body, length: 20, separator: ' ')
+            hotel.body
         else
             content_tag(:i, 'n/a')
         end
