@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'hotels' => 'hotels#index'
-  get 'hotels/:id' => 'hotels#show', as: :hotel
+  resources :hotels
+
   root 'hotels#index'
+
   get 'restaurants' => 'restaurants#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

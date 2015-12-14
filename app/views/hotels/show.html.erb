@@ -1,6 +1,7 @@
-<h3><%= @hotels.title %></h3>
+<h3><%= @hotel.title %></h3>
 
-<p><%= @hotels.body %></p>
+<p><%= @hotel.body %></p>
 
-<!-- <a href="/hotels">Back to Hotels</a> -->
-<%= link_to "Back to Hotels", hotels_path %>
+<%= link_to "Edit this Hotel", edit_hotel_path(@hotel), class: 'btn btn-info' %>
+
+<%= link_to "Back to Hotels", hotels_path, class: 'btn btn-info' %>
