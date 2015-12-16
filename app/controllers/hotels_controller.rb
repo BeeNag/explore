@@ -22,6 +22,7 @@ class HotelsController < ApplicationController
 	def update
 		@hotel = Hotel.find(params[:id])
 		@hotel.update(hotel_params)
+		flash[:notice] = "Congrats! You successfully updated this Hotel"
 		redirect_to hotel_path(@hotel)
 	end
 
