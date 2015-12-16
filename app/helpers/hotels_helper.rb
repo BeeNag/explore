@@ -15,4 +15,12 @@ module HotelsHelper
     		content_tag(:i, 'On Request')
     	end
     end
+
+    def format_image(hotel)
+        if hotel.body.present?
+            hotel.image
+        else
+            content_tag(:i, 'Not Available')
+        end
+    end
 end
