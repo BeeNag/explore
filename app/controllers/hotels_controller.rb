@@ -2,6 +2,13 @@ class HotelsController < ApplicationController
 
 	def index
 		@hotels = Hotel.all
+		@hotels = Hotel.order(title: :asc)
+		@luxury_hotels = Hotel.luxury_hotels
+		@bargain_hotels = Hotel.bargain_hotels
+		@luxury_price_range_min = Hotel.luxury_price_range_min
+		@luxury_price_range_max = Hotel.luxury_price_range_max
+		@bargain_price_range_min = Hotel.bargain_price_range_min
+		@bargain_price_range_max = Hotel.bargain_price_range_max
 	end
 
 	def show
