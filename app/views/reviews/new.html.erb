@@ -1,0 +1,14 @@
+<h3>New review for: <%= @hotel.title %></h3>
+
+<%= form_for([@hotel, @review]) do | f | %>
+    <p>
+        <%= f.label :body, "Please enter your review" %>
+    </p>
+    <p> 
+        <%= f.text_area :body, cols: 30, rows: 10 %>
+    </p>
+    <p>
+        <%= f.submit %>
+    </p>
+
+<% end %>

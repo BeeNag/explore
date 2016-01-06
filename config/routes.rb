@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :hotels
+  resources :hotels do
+    resources :reviews
+  end
 
   root 'hotels#index'
 

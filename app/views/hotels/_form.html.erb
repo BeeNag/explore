@@ -1,4 +1,10 @@
 <%= form_for(@hotel) do |f| %>
+	<p>This form contains <%= pluralize(@hotel.errors.count, "error") %></p>
+	<ul>
+	<% @hotel.errors.full_messages.each do |message| %>
+		<li><%= message %></li>
+	<% end %>
+	</ul>
 	<p>
 		<%= f.label :title %>
 		<%= f.text_field :title, autofocus: true %>

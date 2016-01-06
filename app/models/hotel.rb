@@ -1,5 +1,15 @@
 class Hotel < ActiveRecord::Base
 
+	has_many :reviews, dependent: :destroy
+
+	validates :title, presence: true
+	validates :body, length: {minimum: 10}
+	validates :price, numericality: {greater_than_or_equal_to: 0}
+	validates :image, allow_blank: true, format: {
+		with: /\w+\.(gif|jpg|png)\z/i,
+		message: "must be a valid image (GIF, JPG or PNG)"
+	}
+
 	def self.luxury_hotels
 		where("price > 100")
 	end

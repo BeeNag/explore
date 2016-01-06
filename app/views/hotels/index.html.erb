@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h1>Hello, my peeps!</h1>
+  <h1>Hello, Hotel Goers!</h1>
 </div>
 <div class="page-header">
   <h1>Hotels <small>Good Hotels</small></h1>
@@ -71,5 +71,12 @@
 	</tbody>
 </table>
 
-<p><a class="btn btn-info" href="/restaurants" role="button">See some Restaurants</a></p>
+<div class="row">
+	<div class="col-xs-3 col-xs-offset-3">
+		<p><a class="btn btn-info" href="/restaurants" role="button">See some Restaurants</a></p>
+	</div>
+	<div class="col-xs-3">
+		<p><a class="btn btn-primary" href="<%= new_hotel_path(@hotel) %>" role="button">Add a New Hotel</a></p>
+	</div>
+</div>
 

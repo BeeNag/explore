@@ -1,0 +1,8 @@
+<dl>
+	<dt>Reviews for <%= @hotel.title %></dt>
+	<dd>Here are reviews for this hotel</dd>
+	<dt>Reviews</dt>
+	<% @hotel.reviews.each do |review| %>
+	<dd><%= review.body %></dd>
+	<% end %>
+</dl>

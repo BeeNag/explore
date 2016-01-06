@@ -21,9 +21,12 @@ class HotelsController < ApplicationController
 
 	def update
 		@hotel = Hotel.find(params[:id])
-		@hotel.update(hotel_params)
-		flash[:notice] = "Congrats! You successfully updated this Hotel"
-		redirect_to hotel_path(@hotel)
+		if @hotel.update(hotel_params)
+			flash[:notice] = "Congrats! You successfully updated this Hotel"
+			redirect_to hotel_path(@hotel)
+		else
+			render :edit
+		end
 	end
 
 	def new
@@ -31,8 +34,13 @@ class HotelsController < ApplicationController
 	end
 
 	def create
-		hotel = Hotel.create(hotel_params)
-		redirect_to hotel_path(hotel)
+		@hotel = Hotel.new(hotel_params)
+
+		if(@hotel.save)
+			redirect_to hotel_path(@hotel)
+		else
+			render :new
+		end
 	end
 
 	def destroy
