@@ -1,0 +1,6 @@
+<div>
+	<h4><%= hotel.title %></h4>
+	<p><%= format_body(hotel) %></p>
+    <p><%= link_to(pluralize(hotel.reviews.count, "review"), hotel_reviews_path(hotel))  %></p>
+    <p><%= link_to "Show", hotel_path(hotel) %> | <%= link_to "Edit", edit_hotel_path(hotel) %> |  <%= link_to "Delete", hotel_path(hotel), method: :delete, data: {confirm: "Would you like to delete this?"} %></p>
+</div>

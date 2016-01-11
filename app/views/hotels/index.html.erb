@@ -9,7 +9,7 @@
 
 <p>These are <%= @hotels.count %> lovely-jubbly hotels:</p>
 
-<h2>Luxury Hotels</h2>
+<!-- <h2>Luxury Hotels</h2>
 
 <p>Prices range from: <%= @luxury_price_range_min %> to <%= @luxury_price_range_max %></p>
 
@@ -69,7 +69,11 @@
 		</tr>
 		<% end %>
 	</tbody>
-</table>
+</table> -->
+
+<%= render partial: "hotels", object: @all_hotels, locals: {caption: "All Hotels"} %>
+<%= render partial: "hotels", object: @unreviewed_hotels, locals: {caption: "Unreviewed Hotels"} %>
+<%= render partial: "hotels", object: @reviewed_hotels, locals: {caption: "Reviewed Hotels"} %>
 
 <div class="row">
 	<div class="col-xs-3 col-xs-offset-3">

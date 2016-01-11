@@ -4,12 +4,11 @@
 
 <%= image_tag("Default Hotel.jpg", size: "300", alt: "This a a picture of the Hotel") %>
 
-<%= link_to "Add a Review", new_hotel_review_path(@hotel), class: 'btn btn-info' %>
+<%= link_to "Add a Review", new_hotel_review_path(@hotel) %> | 
+<%= link_to "Back to Hotels", hotels_path %> | 
+<%= link_to "Edit", edit_hotel_path(@hotel) %> | 
+<%= link_to "Delete", hotel_path(@hotel), mehtod: :delete, data: {confirm: "Would you like to delete this?"} %>
 
-<%= link_to "View Reviews for this Hotel", hotel_reviews_path(@hotel), class: 'btn btn-info' %>
+<p>Reviews</p>
 
-<%= link_to "Edit this Hotel", edit_hotel_path(@hotel), class: 'btn btn-info' %>
-
-<%= link_to "Delete this Hotel", hotel_path(@hotel), method: :delete, data: {confirm: "Are you absolutely certain that you want to delete this hotel?"}, class: 'btn btn-info' %>
-
-<%= link_to "Back to Hotels", hotels_path, class: 'btn btn-info' %>
+<%= render partial: "reviews/review", collection: @hotel.reviews %>

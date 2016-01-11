@@ -9,6 +9,9 @@ class HotelsController < ApplicationController
 		@luxury_price_range_max = Hotel.luxury_price_range_max
 		@bargain_price_range_min = Hotel.bargain_price_range_min
 		@bargain_price_range_max = Hotel.bargain_price_range_max
+		@all_hotels = Hotel.all
+		@reviewed_hotels = Hotel.with_reviews
+		@unreviewed_hotels = Hotel.without_reviews
 	end
 
 	def show

@@ -1,0 +1,27 @@
+<!-- <table class="table table-hover table-bordered table-striped">
+  <caption><%= caption %></caption>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Reviews</th>
+    <th></th>    
+  </tr>
+  <% hotels.each do | hotel | %>  
+  <tr>
+    <td><%= link_to(hotel.title,  hotel_path(hotel)) %></td>
+    <td><%= format_body(hotel) %></td>
+    <td><%= link_to(hotel.reviews.count, hotel_reviews_path(hotel)) %></td>
+    <td>
+      <%= link_to "Show", hotel_path(hotel) %> | 
+      <%= link_to "Edit", edit_hotel_path(hotel) %> | 
+      <%= link_to "Delete", hotel_path(hotel), method: :delete, data: {confirm: "Would you like to delete this?"} %>
+
+    </td>
+  </tr>
+  <% end %>
+</table> -->
+
+<div>
+  <h3><%= caption %></h3>
+    <%= render partial: hotels, spacer_template: "shared/break" %>
+</div>

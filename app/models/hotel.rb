@@ -10,6 +10,14 @@ class Hotel < ActiveRecord::Base
 		message: "must be a valid image (GIF, JPG or PNG)"
 	}
 
+	def self.without_reviews
+		includes(:reviews).where(:reviews => {:id => nil})
+	end
+
+	def self.with_reviews
+		includes(:reviews).where.not(:reviews => {:id => nil})
+	end
+
 	def self.luxury_hotels
 		where("price > 100")
 	end
