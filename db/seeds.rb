@@ -21,3 +21,9 @@ Review.create!([
   {body: "I had a great time when I stayed in this hotel for a business trip! Well recommended!", hotel_id: 1},
   {body: "The Marriott that we stayed looked absolutely horrendous from the outside, and it didn't get much better from there! Should have spent a little more and stayed at a better hotel. Good if on a budget but not really otherwise!", hotel_id: 6}
 ])
+User.create!([
+  {name: "Ben", email: "bnaglerose88@gmail.com", password_digest: "$2a$10$F86Bwto015D5saiFQkBaNOByoXd3Ciaz79/lH3JgK3cDEvPAiPbDO"},
+  {name: "Benny", email: "dimene_roc@hotmail.com", password_digest: "$2a$10$DaN7DUiP.1QLTnpYx5JTVeCGqlkoJ0jWOmbvohnuWNcFcG0wDd.bu"},
+  {name: "John", email: "john@gmail.com", password_digest: "$2a$10$uLiSwvHD3Aq4cHR8bDHRyOP79sEHCeXShFxiML5pjFoVcokBagRJO"},
+  {name: "Tom", email: "tom@gmail.com", password_digest: "$2a$10$/QGkfj8/Dn.usFdmzv5rjOrmubVY362YvYX7YGP/cAxuC4jRIlUky"}
+])
