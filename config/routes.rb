@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+  root 'hotels#index'
+
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
   resources :hotels do
     resources :reviews
   end
 
-  root 'hotels#index'
+  resources :users
 
   get 'restaurants' => 'restaurants#index'
 

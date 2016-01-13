@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
 
+	before_action :require_login, only: [:new, :create]
+
 	def index
 
 		@reviews = find_hotel.reviews

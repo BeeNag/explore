@@ -9,68 +9,6 @@
 
 <p>These are <%= @hotels.count %> lovely-jubbly hotels:</p>
 
-<!-- <h2>Luxury Hotels</h2>
-
-<p>Prices range from: <%= @luxury_price_range_min %> to <%= @luxury_price_range_max %></p>
-
-<table class="table table-hover table-bordered table-striped">
-	<thead>
-		<tr>
-			<th>Title</th>
-			<th>Body</th>
-			<th>Price</th>
-			<th>Image</th>
-			<th>Edit Entry</th>
-			<th>Delete Entry</th>
-			<th>Posted On</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @luxury_hotels.each do |hotel| %>
-		<tr>
-			<td><%= link_to(hotel.title, hotel) %></td>
-			<td><%= format_body(hotel) %></td>
-			<td><%= format_price(hotel) %></td>
-			<td><%= format_image(hotel) %></td>
-			<td><%= link_to "Edit", edit_hotel_path(hotel) %></td>
-			<td><%= link_to "Delete", hotel_path(hotel), method: :delete %></td>
-			<td><%= hotel.created_at.to_s(:short) %></td>
-		</tr>
-		<% end %>
-	</tbody>
-</table>
-
-<h2>Bargain Hotels</h2>
-
-<p>Prices range from: <%= @bargain_price_range_min %> to <%= @bargain_price_range_max %></p>
-
-<table class="table table-hover table-bordered table-striped">
-	<thead>
-		<tr>
-			<th>Title</th>
-			<th>Body</th>
-			<th>Price</th>
-			<th>Image</th>
-			<th>Edit Entry</th>
-			<th>Delete Entry</th>
-			<th>Posted On</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @bargain_hotels.each do |hotel| %>
-		<tr>
-			<td><%= link_to(hotel.title, hotel) %></td>
-			<td><%= format_body(hotel) %></td>
-			<td><%= format_price(hotel) %></td>
-			<td><%= format_image(hotel) %></td>
-			<td><%= link_to "Edit", edit_hotel_path(hotel) %></td>
-			<td><%= link_to "Delete", hotel_path(hotel), method: :delete %></td>
-			<td><%= hotel.created_at.to_s(:short) %></td>
-		</tr>
-		<% end %>
-	</tbody>
-</table> -->
-
 <%= render partial: "hotels", object: @all_hotels, locals: {caption: "All Hotels"} %>
 <%= render partial: "hotels", object: @unreviewed_hotels, locals: {caption: "Unreviewed Hotels"} %>
 <%= render partial: "hotels", object: @reviewed_hotels, locals: {caption: "Reviewed Hotels"} %>

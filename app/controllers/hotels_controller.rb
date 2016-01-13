@@ -1,5 +1,7 @@
 class HotelsController < ApplicationController
 
+	before_action :require_login, only: [:show, :edit, :update, :new, :create, :destroy]
+
 	def index
 		@hotels = Hotel.all
 		@hotels = Hotel.order(title: :asc)
